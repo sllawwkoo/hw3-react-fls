@@ -1,0 +1,46 @@
+.wrapper {
+	font-family: var(--font-shantell);
+	flex-basis: 40%;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.title {
+	font-weight: 700;
+	font-size: clamp(0.625rem, 0.261rem + 1.82vw, 1.625rem);
+	text-align: center;
+	line-height: 1.4;
+	color: #333333;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(0.313rem, 0.199rem + 0.57vw, 0.625rem);
+	padding: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem);
+	border: 1px solid rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+	background-color: rgba(185, 199, 218, 0.3);
+	// min-height: 494px;
+	min-height: clamp(14.688rem, 8.801rem + 29.43vw, 30.875rem);
+}
+
+.athlete {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: clamp(0.313rem, 0.199rem + 0.57vw, 0.625rem);
+	padding-block:clamp(0.313rem, 0.199rem + 0.57vw, 0.625rem) ;
+	padding-inline: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem);
+	border: 1px solid rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.name {
+	font-size: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem);
+	font-weight: 600;
+}

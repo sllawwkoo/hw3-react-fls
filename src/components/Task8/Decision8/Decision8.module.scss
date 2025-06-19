@@ -1,0 +1,28 @@
+.wrapper {
+	background-color: rgba(185, 199, 218, 0.5);
+	padding-block: 40px;
+	border-radius: 10px;
+	padding-inline: 15px;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	padding-inline: 15px;
+	padding-block: 30px ;
+	width: 100%;
+	max-width: 700px;
+	border-radius: 10px;
+	background-color: #fff;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.body {
+	display: flex;
+	justify-content: center;
+	gap: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem);
+	width: 100%;
+}

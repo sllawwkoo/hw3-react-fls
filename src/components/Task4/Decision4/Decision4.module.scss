@@ -1,0 +1,60 @@
+.wrapper {
+	background-color: rgba(185, 199, 218, 0.5);
+	padding-block: 40px;
+	border-radius: 10px;
+	padding-inline: 15px;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	padding-inline: 15px;
+	padding-block: 30px;
+	width: 100%;
+	max-width: 700px;
+	border-radius: 10px;
+	background-color: #fff;
+
+	display: flex;
+	justify-content: center;
+	gap: clamp(1.25rem, 0.341rem + 4.55vw, 3.75rem);
+}
+
+.generalBtn,
+.selectedBtn {
+	width: clamp(1rem, 0.341rem + 3.3vw, 2.813rem);
+	// width: 100%;
+	aspect-ratio: 1;
+	position: relative;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.generalBtn::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../../../assets/img/green-arrow-right.svg") center / cover no-repeat;
+	z-index: 2;
+}
+
+.selectedBtn::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../../../assets/img/red-arrow-left.svg") center / cover no-repeat;
+	z-index: 2;
+	transition: opacity 0.3s ease-in-out;
+	will-change: opacity;
+}
+
+.selectedBtn:hover::after,
+.generalBtn:hover::after {
+	opacity: 0.5;
+}
