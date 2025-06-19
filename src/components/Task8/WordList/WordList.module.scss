@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
-	padding: 20px;
+	padding: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
 	border-radius: 16px;
 	background: #f0f0f3;
 	box-shadow:
@@ -15,12 +15,13 @@
 
 .word {
 	text-align: center;
-	padding: 10px 18px;
+	padding-block: clamp(0.375rem, 0.284rem + 0.45vw, 0.625rem);
+	padding-inline: clamp(0.75rem, 0.614rem + 0.68vw, 1.125rem);
 	border-radius: 10px;
 	background: #f0f0f3;
 	color: #333;
 	font-weight: 600;
-	font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1.125rem);
+	font-size: clamp(0.75rem, 0.614rem + 0.68vw, 1.125rem);
 	text-shadow: 1px 1px 1px #fff;
 	box-shadow:
 		2px 2px 5px #d1d9e6,
@@ -31,13 +32,15 @@
 		transform 0.3s ease,
 		box-shadow 0.3s ease,
 		color 0.3s ease;
-		will-change: transform, box-shadow, color;
+	will-change: transform, box-shadow, color;
 
-	&:hover {
-		box-shadow:
-			inset 2px 2px 4px #006aff,
-			inset -2px -2px 4px #006aff;
-		transform: scale(1.05);
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow:
+				inset 2px 2px 4px #006aff,
+				inset -2px -2px 4px #006aff;
+			transform: scale(1.05);
+		}
 	}
 
 	&:active {
